@@ -18,7 +18,7 @@ import time
 import os
 os.environ["LANGCHAIN_TRACING_V2"]='true'
 os.environ["LANGCHAIN_ENDPOINT"]="https://api.smith.langchain.com"
-os.environ["LANGCHAIN_API_KEY"]="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"
+os.environ["LANGCHAIN_API_KEY"]="api_key"
 os.environ["LANGCHAIN_PROJECT"]="Question Answering with Web or File"
 
 def clean_text(pro):
@@ -29,7 +29,7 @@ def clean_text(pro):
 app = Flask(__name__)
 
 model = 'llama3-70b-8192'
-llm = ChatGroq(temperature=0.7, groq_api_key="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", model_name=model)
+llm = ChatGroq(temperature=0.7, groq_api_key="gsk_api_key", model_name=model)
 
 # Functions for different functionalities
 def run_retrieval_qa_text(url, query):
